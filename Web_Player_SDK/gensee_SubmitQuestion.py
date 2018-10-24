@@ -92,7 +92,6 @@ class Gensee_SubmitQuestion(unittest.TestCase):
                 time.sleep(self.time_interval+1)
                 #切换到sdk
                 driver.switch_to.window(self.handles[0])
-#                 print(receive_msg.text)   #flash没打开，没有加入直播  那是不是也要验证没加入直播提示是什么？？
 
     """当操作时间小于boss设置的提问间隔时间,boss间隔提问时间尽量设置的稍微大一点,submit_in_time 间隔时间内提问"""
     def test_submitq_in_time(self):
@@ -121,33 +120,6 @@ class Gensee_SubmitQuestion(unittest.TestCase):
                 flag = False
                 self.assertEqual(self.result_true, get_true_result)
             time.sleep(1)
-
-    """
-    def test_submit_out_time(self):
-        driver = self.driver
-        browser = self.browser
-        Gensee_SubmitQuestion.submit(self)
-        time.sleep(3)
-        send_button = webplayersdk_login.send_button(driver)
-        data_content = self.data_content
-        filename = filename = "D:\\Program Files\\python-workplace\\Python3\\Selenium\\" \
-                              "Gensee\\documents\\submitQuestion_content.csv"
-        with open(filename, 'r') as fp_object:
-            contents = csv.reader(fp_object)
-            for content in contents:
-                data_content.clear()
-                data_content.send_keys(content)
-                send_button.click()
-                #获取 result
-                receive_msg_sucess = browser.findXpath(driver, "//*[@id='eventslog']/div[2]/span").text.split(",")[-1]
-                receive_msg_s_result = receive_msg_sucess[:len(receive_msg_sucess)-1]
-                self.assertEqual('"result":true', receive_msg_s_result)
-                time.sleep(self.time_interval+1)
-        time.sleep(2)
-    """
-    #其他用户提问，sdk收不到
-
-    #组织者问题答复，这个好像不大能测啊 到时再看看
 
 
     def tearDown(self):

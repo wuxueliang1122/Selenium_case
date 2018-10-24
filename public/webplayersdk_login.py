@@ -6,20 +6,20 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
-import sys
-sys.path.append("D:\\Program Files\\python-workplace\\Python3\\")
 
 from Selenium.Gensee.public import location
 import time, os, re
+
+
 class LoginDemo():
     def __init__(self):
         self.browser = location
 
-        self.base_url = "http://192.168.1.233"
+        self.base_url = ""
         self.id = "4d1dc05507c047c2a4e2ba2baa209ff4"
         self.authcode = "000000"
-        self.ctx_training = "training"
-        self.ctx_webcast = "webcast"
+        self.ctx_training = ""
+        self.ctx_webcast = ""
         self.uid = self.sdk_uid()
         self.uname = self.sdk_uname()
 
@@ -135,7 +135,7 @@ class Element_location():
 class Document_directory():
     #数据驱动的目录
     def document_dir(self):
-        filename = "D:\\Program Files\\python-workplace\\Python3\\Selenium\\Gensee\\documents"
+        filename = ""
         return filename
 
 

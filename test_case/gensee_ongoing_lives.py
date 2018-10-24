@@ -15,7 +15,7 @@ class Gensee_Onging_Lives(unittest.TestCase):
         self.driver = webdriver.Chrome()
         self.we = location
         self.driver.implicitly_wait(10)
-        self.base_url = "http://192.168.1.233/webcast"
+        self.base_url = ""
         self.verificationErrors = []
         self.accept_next_alert = True
     def search_bar(self):
