@@ -1,0 +1,2 @@
+1、sdk发送表情：{"content":"【太快了】","richtext":"<img src=\"http://192.168.1.138/webcast_trunk/static/emotion/emotion.bs.gif\"/>"}
+2、sdk发送的内容里尽量不要带空格，或者只带一个空格，web接收到的空格应该只显示一个
